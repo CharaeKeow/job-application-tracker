@@ -29,6 +29,7 @@ job-application-tracker/
 ## Getting Started
 
 ### Prerequisites
+
 - Node.js 20+
 - pnpm 9+
 - Docker (for local Postgres)
@@ -40,11 +41,13 @@ job-application-tracker/
 ## Features
 
 ### Current
+
 - Monorepo architecture with shared configurations
 - Local development environment with hot module reloading
 - PostgreSQL database with Docker Compose
 
 ### Planned
+
 - **Authentication**: Email/password login with session management
 - **Job Management**: CRUD operations for job applications
 - **Status Tracking**: Pipeline stages (applied, interviewing, offer, rejected)
@@ -55,12 +58,14 @@ job-application-tracker/
 ## Milestones
 
 **Milestone 1: Local Development** ✅ In Progress
+
 - Set up monorepo with pnpm workspace
 - Implement core features locally
 - Achieve full-stack type safety
 - Test authentication flows
 
 **Milestone 2: Deployment** (Future)
+
 - Choose hosting strategy (VPS, serverless, or hybrid)
 - Configure CI/CD pipeline
 - Set up monitoring and logging
