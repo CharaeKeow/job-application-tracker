@@ -1,14 +1,14 @@
 {
+  "extends": "@job-application-tracker/config-typescript/base.json",
   "compilerOptions": {
     "target": "ESNext",
     "module": "NodeNext",
-    "strict": true,
-    "verbatimModuleSyntax": true,
-    "skipLibCheck": true,
     "types": ["node"],
-    "jsx": "react-jsx",
     "jsxImportSource": "hono/jsx",
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
   "exclude": ["node_modules"]
 }

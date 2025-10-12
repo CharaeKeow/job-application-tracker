@@ -6,6 +6,8 @@
   "scripts": {
     "dev:fe": "pnpm --filter web dev",
     "dev:be": "pnpm --filter api dev",
+    "build:fe": "pnpm --filter web build",
+    "build:be": "pnpm --filter api build",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },
