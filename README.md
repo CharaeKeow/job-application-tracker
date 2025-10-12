@@ -1,35 +1,14 @@
 # Job Application Tracker
 
-A modern full-stack job application tracking system built as a learning project to explore monorepo architecture, modern web frameworks, and production-grade authentication patterns.
+A full-stack job application tracking system built as a learning project to explore modern web development practices, including monorepo architecture, type-safe frameworks, and robust authentication.
 
-## Overview
-
-This project serves as a practical exploration of:
-- **Monorepo management** with pnpm workspaces
-- **TanStack Start** for type-safe full-stack React development
-- **Hono** for lightweight, web-standards-compliant backend APIs
-- **Better Auth** for production-ready authentication flows
-- **LLM integration** for automated job posting data extraction
-
-Built in 2025 to replace the original 2023 version (separate Express + Next.js repos) with modern tooling and improved developer experience.
+This project is a 2025 rebuild of an earlier version, focusing on learning new stacks that I am curious on.
 
 ## Tech Stack
 
-### Frontend
-- **TanStack Start** - Full-stack React framework with server functions
-- **TypeScript** - End-to-end type safety
-- **TanStack Query** - Data fetching and state management
-
-### Backend
-- **Hono** - Fast, lightweight web framework following web standards
-- **Better Auth** - Framework-agnostic authentication with built-in security features
-- **PostgreSQL** - Relational database
-- **Drizzle ORM** - Type-safe database client
-
-### Infrastructure
-- **pnpm workspaces** - Monorepo package management
-- **Docker Compose** - Local development environment
-- **Shared packages** - Common types, validators, and configs
+- **Frontend:** TanStack Start, TypeScript, TanStack Query
+- **Backend:** Hono, Better Auth, PostgreSQL, Drizzle ORM
+- **Infrastructure:** `pnpm` workspaces, Docker Compose, Shared packages
 
 ## Project Structure
 
@@ -56,49 +35,7 @@ job-application-tracker/
 
 ### Installation
 
-```bash
-# Clone the repository
-git clone <repo-url>
-cd job-application-tracker
-
-# Install dependencies
-pnpm install
-
-# Start local Postgres
-pnpm db:up
-
-# Run database migrations
-pnpm --filter backend migrate
-
-# Start development servers
-pnpm dev
-```
-
-The application will be available at:
-- Frontend: `http://localhost:3000`
-- Backend API: `http://localhost:4000`
-
-### Useful Commands
-
-```bash
-# Development
-pnpm dev              # Start all apps in parallel
-pnpm dev:fe           # Start frontend only
-pnpm dev:be           # Start backend only
-
-# Database
-pnpm db:up            # Start Postgres container
-pnpm db:down          # Stop Postgres container
-pnpm db:reset         # Reset database (destructive)
-
-# Build
-pnpm build            # Build all packages
-pnpm --filter web build   # Build specific package
-
-# Linting & Type Checking
-pnpm lint             # Run ESLint on all packages
-pnpm typecheck        # Run TypeScript compiler checks
-```
+// TODO:
 
 ## Features
 
@@ -115,9 +52,7 @@ pnpm typecheck        # Run TypeScript compiler checks
 - **Filtering & Search**: Query jobs by company, status, date range
 - **Analytics**: Application success rates and timeline visualization
 
-## Development Philosophy
-
-This project follows a **milestone-based approach**:
+## Milestones
 
 **Milestone 1: Local Development** ✅ In Progress
 - Set up monorepo with pnpm workspace
@@ -132,20 +67,6 @@ This project follows a **milestone-based approach**:
 - Production database setup
 
 Each milestone provides standalone learning value - completion of Milestone 1 is sufficient to gain deep technical knowledge even without deployment.
-
-## Architecture Decisions
-
-### Why Monorepo?
-Enables shared types and validators between frontend and backend, eliminating API contract drift. Simplifies development workflow with single command to run entire stack.
-
-### Why TanStack Start?
-Modern alternative to Next.js with better type safety for server functions, framework-agnostic deployment, and Vite-powered development experience.
-
-### Why Hono?
-Web standards-compliant APIs (Request/Response objects) that work across Node.js, Bun, Deno, and edge runtimes. Built-in RPC support provides end-to-end type safety without GraphQL/tRPC complexity.
-
-### Why Better Auth?
-Superior to NextAuth for framework-agnostic projects. Built-in MFA, passkeys, rate limiting, and better TypeScript integration with modern ORMs.
 
 ## Contributing
 
