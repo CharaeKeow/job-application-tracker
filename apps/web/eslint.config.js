@@ -22,8 +22,9 @@ export default tseslint.config(
           caughtErrorsIgnorePattern: '^_',
         },
       ],
-      '@typescript-eslint/array-type': 'warn',
       '@typescript-eslint/require-await': 'warn',
+      'sort-imports': 'off',
+      '@typescript-eslint/array-type': 'off',
     },
   },
   {
