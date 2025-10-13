@@ -39,12 +39,12 @@ This is a job application tracker built as a monorepo using pnpm workspaces. It'
 
 - `apps/web/` - TanStack Start frontend application
 - `apps/api/` - Hono backend API
-- `packages/` - Shared packages (currently empty, planned for types/validators/config)
+- `packages/config-typescript/` - Shared TypeScript configuration package
 
 ## Development Notes
 
 - Frontend runs on port 3000, backend on port 4000
 - Uses TanStack Devtools for development debugging
 - The project is currently in early development with basic scaffolding
-- No packages directory exists yet - shared packages are planned but not implemented
 - Both apps use the shared TypeScript configuration from the workspace
+- Package structure follows flat naming convention (config-typescript matches package name)

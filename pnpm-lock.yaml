@@ -23,7 +23,7 @@ importers:
     devDependencies:
       '@job-application-tracker/config-typescript':
         specifier: workspace:^
-        version: link:../../packages/config/typescript
+        version: link:../../packages/config-typescript
       '@types/node':
         specifier: ^20.11.17
         version: 20.19.21
@@ -90,7 +90,7 @@ importers:
     devDependencies:
       '@job-application-tracker/config-typescript':
         specifier: workspace:^
-        version: link:../../packages/config/typescript
+        version: link:../../packages/config-typescript
       '@tanstack/eslint-config':
         specifier: ^0.3.0
         version: 0.3.2(@typescript-eslint/utils@8.45.0(eslint@9.37.0(jiti@2.6.1))(typescript@5.9.3))(eslint@9.37.0(jiti@2.6.1))(typescript@5.9.3)
@@ -131,7 +131,7 @@ importers:
         specifier: ^5.1.0
         version: 5.1.0
 
-  packages/config/typescript: {}
+  packages/config-typescript: {}
 
 packages:
 
