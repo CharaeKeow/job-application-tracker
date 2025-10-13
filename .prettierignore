@@ -1,0 +1,17 @@
+# Ignore artifacts:
+build
+dist
+
+# Ignore dependencies:
+node_modules
+
+# Ignore git history
+.git
+
+.output
+.nitro
+.tanstack
+.claude
+
+# Ignore generated files:
+routeTree.gen.ts
