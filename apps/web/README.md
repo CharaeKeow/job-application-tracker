@@ -90,10 +90,8 @@ In the File Based Routing setup the layout is located in `src/routes/__root.tsx`
 Here is an example layout that includes a header:
 
 ```tsx
-import { Outlet, createRootRoute } from '@tanstack/react-router';
+import { createRootRoute, Link, Outlet } from '@tanstack/react-router';
 import { TanStackRouterDevtools } from '@tanstack/react-router-devtools';
-
-import { Link } from '@tanstack/react-router';
 
 export const Route = createRootRoute({
   component: () => (
@@ -244,6 +242,7 @@ Now let's create a simple counter in the `src/App.tsx` file as a demonstration.
 ```tsx
 import { useStore } from '@tanstack/react-store';
 import { Store } from '@tanstack/store';
+
 import './App.css';
 
 const countStore = new Store(0);
@@ -268,7 +267,8 @@ Let's check this out by doubling the count using derived state.
 
 ```tsx
 import { useStore } from '@tanstack/react-store';
-import { Store, Derived } from '@tanstack/store';
+import { Derived, Store } from '@tanstack/store';
+
 import './App.css';
 
 const countStore = new Store(0);

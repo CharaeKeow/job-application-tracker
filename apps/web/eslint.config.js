@@ -24,7 +24,6 @@ export default tseslint.config(
       ],
       '@typescript-eslint/array-type': 'warn',
       '@typescript-eslint/require-await': 'warn',
-      'sort-imports': 'warn',
     },
   },
   {
