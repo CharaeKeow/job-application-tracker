@@ -6,9 +6,9 @@ This project is a 2025 rebuild of an earlier version, focusing on learning new s
 
 ## Tech Stack
 
-- **Frontend:** TanStack Start, TypeScript, TanStack Query
-- **Backend:** Hono, Better Auth, PostgreSQL, Drizzle ORM
-- **Infrastructure:** `pnpm` workspaces, Docker Compose, Shared packages
+- **Frontend:** TanStack Start, TypeScript, TanStack Query, Tailwind CSS v4
+- **Backend:** Hono
+- **Infrastructure:** `pnpm` workspaces, Shared packages
 
 ## Project Structure
 
@@ -16,11 +16,10 @@ This project is a 2025 rebuild of an earlier version, focusing on learning new s
 job-application-tracker/
 ├── apps/
 │   ├── web/              # TanStack Start frontend
-│   └── backend/          # Hono API server
+│   └── api/              # Hono API server
 ├── packages/
-│   ├── types/            # Shared TypeScript types
-│   ├── validators/       # Zod schemas for validation
-│   └── config/           # ESLint, TypeScript, Prettier configs
+│   ├── config-eslint/    # Shared ESLint configurations
+│   └── config-typescript/ # Shared TypeScript configuration
 ├── docker-compose.yml    # Local Postgres container
 ├── pnpm-workspace.yaml   # Workspace configuration
 └── package.json          # Root scripts
@@ -36,7 +35,12 @@ job-application-tracker/
 
 ### Installation
 
-// TODO:
+```bash
+git clone https://github.com/CharaeKeow/job-application-tracker.git
+cd job-application-tracker
+pnpm install
+pnpm dev
+```
 
 ## Features
 
@@ -44,10 +48,10 @@ job-application-tracker/
 
 - Monorepo architecture with shared configurations
 - Local development environment with hot module reloading
-- PostgreSQL database with Docker Compose
 
 ### Planned
 
+- **Database**: PostgreSQL with Docker Compose
 - **Authentication**: Email/password login with session management
 - **Job Management**: CRUD operations for job applications
 - **Status Tracking**: Pipeline stages (applied, interviewing, offer, rejected)
@@ -59,17 +63,22 @@ job-application-tracker/
 
 **Milestone 1: Local Development** ✅ In Progress
 
-- Set up monorepo with pnpm workspace
-- Implement core features locally
-- Achieve full-stack type safety
-- Test authentication flows
+- [x] Project setup (monorepo setup, linting, formatting, & typing)
+- [ ] Set up PostgreSQL database with Drizzle ORM
+- [ ] Integrate Better Auth for authentication
+- [ ] Design job application schema with status field
+- [ ] Build API endpoints for job CRUD operations
+- [ ] Create frontend forms and UI for job management
+- [ ] Add filtering and search functionality
+- [ ] Integrate LLM for automated job detail extraction
 
 **Milestone 2: Deployment** (Future)
 
-- Choose hosting strategy (VPS, serverless, or hybrid)
-- Configure CI/CD pipeline
-- Set up monitoring and logging
-- Production database setup
+- [ ] Choose and configure hosting strategy (VPS, serverless, or hybrid)
+- [ ] Set up CI/CD pipeline for automated deployments
+- [ ] Configure monitoring and logging
+- [ ] Set up production database
+- [ ] Add analytics dashboard for application success rates
 
 Each milestone provides standalone learning value - completion of Milestone 1 is sufficient to gain deep technical knowledge even without deployment.
 
