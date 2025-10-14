@@ -2,7 +2,8 @@
   "extends": "@job-application-tracker/config-typescript/base.json",
   "compilerOptions": {
     "target": "ESNext",
-    "module": "NodeNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
     "types": ["node"],
     "jsxImportSource": "hono/jsx",
     "outDir": "./dist",
