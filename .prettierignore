@@ -4,14 +4,17 @@ dist
 
 # Ignore dependencies:
 node_modules
+pnpm-lock.yaml
 
 # Ignore git history
 .git
 
+# Ignore generated files:
+routeTree.gen.ts
 .output
 .nitro
 .tanstack
 .claude
 
-# Ignore generated files:
-routeTree.gen.ts
+# Ignore database migrations:
+apps/api/migrations
