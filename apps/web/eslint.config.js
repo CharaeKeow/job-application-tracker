@@ -1,9 +1,9 @@
 // @ts-check
 
 import { tanstackConfig } from '@tanstack/eslint-config';
-import tseslint from 'typescript-eslint';
+import { defineConfig } from 'eslint/config';
 
-export default tseslint.config(
+export default defineConfig([
   ...tanstackConfig,
   {
     files: ['**/*.{ts,tsx,js,jsx}'],
@@ -48,4 +48,4 @@ export default tseslint.config(
       '**/eslint.config.js',
     ],
   },
-);
+]);
