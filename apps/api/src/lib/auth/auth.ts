@@ -7,4 +7,8 @@ export const auth = betterAuth({
   database: drizzleAdapter(db, {
     provider: 'sqlite',
   }),
+  emailAndPassword: {
+    enabled: true,
+  },
+  // TODO: Add Google
 });
