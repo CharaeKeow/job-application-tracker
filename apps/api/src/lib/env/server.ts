@@ -6,6 +6,7 @@ import { z } from 'zod';
 
 export const serverEnv = createEnv({
   server: {
+    FRONTEND_URL: z.url(),
     DATABASE_URL: z.string(),
     DATABASE_AUTH_TOKEN: z.string(),
   },

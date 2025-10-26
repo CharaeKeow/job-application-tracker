@@ -4,7 +4,7 @@ import { auth } from '@/lib/auth/auth';
 
 const authRoute = new Hono();
 
-authRoute.on(['POST', 'GET'], '/api/auth/*', (c) => {
+authRoute.on(['POST', 'GET'], '/auth/*', (c) => {
   return auth.handler(c.req.raw);
 });
 
