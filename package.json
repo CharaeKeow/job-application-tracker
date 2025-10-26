@@ -6,6 +6,7 @@
   "scripts": {
     "dev:fe": "pnpm --filter web dev",
     "dev:be": "pnpm --filter api dev",
+    "dev:db": "turso dev --db-file local.db",
     "build:fe": "pnpm --filter web build",
     "build:be": "pnpm --filter api build",
     "lint": "pnpm -r lint",
